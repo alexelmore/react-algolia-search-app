@@ -7,6 +7,8 @@ import {
   ClearRefinements,
   RefinementList,
   Configure,
+  Stats,
+  SortBy,
 } from "react-instantsearch-dom";
 import Hit from "./Hit";
 import "../App.css";
@@ -30,7 +32,12 @@ function Search() {
         </div>
         <div className="right-panel">
           <SearchBox />
-          <Hits hitComponent={Hit} />
+          <div className="content">
+            <div className="info">
+              <Stats />
+            </div>
+            <Hits hitComponent={Hit} />
+          </div>
           <Pagination />
         </div>
       </InstantSearch>

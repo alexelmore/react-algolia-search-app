@@ -4,15 +4,19 @@ import "../App.css";
 
 function Hit({ hit }) {
   return (
-    <div>
-      <img src={hit.image} align="left" alt={hit.name} />
-      <div className="hit-name">
-        <Highlight attribute="name" hit={hit} />
+    <div className="hit">
+      <div className="hit-image">
+        <img src={hit.image} align="left" alt={hit.name} />
       </div>
-      <div className="hit-description">
-        <Highlight attribute="description" hit={hit} />
+      <div className="hit-content">
+        <div className="hit-price">${hit.price}</div>
+        <div className="hit-name">
+          <Highlight attribute="name" hit={hit} />
+        </div>
+        <div className="hit-description">
+          <Highlight attribute="description" hit={hit} />
+        </div>
       </div>
-      <div className="hit-price">${hit.price}</div>
     </div>
   );
 }
