@@ -2,17 +2,17 @@ import { Highlight } from "react-instantsearch-dom";
 import PropTypes from "prop-types";
 import "../App.css";
 
-function Hit(props) {
+function Hit({ hit }) {
   return (
     <div>
-      <img src={props.hit.image} align="left" alt={props.hit.name} />
+      <img src={hit.image} align="left" alt={hit.name} />
       <div className="hit-name">
-        <Highlight attribute="name" hit={props.hit} />
+        <Highlight attribute="name" hit={hit} />
       </div>
       <div className="hit-description">
-        <Highlight attribute="description" hit={props.hit} />
+        <Highlight attribute="description" hit={hit} />
       </div>
-      <div className="hit-price">${props.hit.price}</div>
+      <div className="hit-price">${hit.price}</div>
     </div>
   );
 }
